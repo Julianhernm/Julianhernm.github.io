@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de ISR y Reserva Legal</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
     <div class="nombre">
         <h2 id="nombre" class="nombres"></h2>
@@ -15,14 +17,15 @@
             <h1>Calculadora de ISR y Reserva Legal</h1>
             <p class="subtitle">Calcula tus impuestos y reservas de manera fácil</p>
         </header>
-        
+
         <div class="form-container">
             <div class="info-box">
                 <div class="info-title">💡 Información importante:</div>
                 <p>Es posible usar expresiones matemáticas como "40 + 50" en cualquier campo.</p>
-                <p>Las exenciones por ganancia se restan de los ingresos brutos, mientras que las exenciones por pérdida se suman al calcular la base imponible.</p>
+                <p>Las exenciones por ganancia se restan de los ingresos brutos, mientras que las exenciones por pérdida
+                    se suman al calcular la base imponible.</p>
             </div>
-            
+
             <div class="input-group">
                 <label for="ingresos-brutos">Ingresos Brutos *</label>
                 <div class="input-with-icon">
@@ -31,7 +34,7 @@
                 </div>
                 <div id="error-ingresos" class="error"></div>
             </div>
-            
+
             <div class="grid">
                 <div class="input-group">
                     <label for="exenciones-isr-perdida">Exención por Pérdidas</label>
@@ -41,7 +44,7 @@
                     </div>
                     <p class="help-text">Pérdidas del ejercicio anterior (se suman)</p>
                 </div>
-                
+
                 <div class="input-group">
                     <label for="exenciones-isr-ganancia">Exención por Ganancia</label>
                     <div class="input-with-icon">
@@ -51,7 +54,7 @@
                     <p class="help-text">Ganancias exentas de ISR (se restan)</p>
                 </div>
             </div>
-            
+
             <div class="input-group">
                 <label for="otras-exenciones">Otras Exenciones</label>
                 <div class="input-with-icon">
@@ -60,30 +63,30 @@
                 </div>
                 <p class="help-text">Otras exenciones aplicables (peridias se suma y ganancia se restan)</p>
             </div>
-            
+
             <button id="submit">Calcular ISR y Reserva Legal</button>
-            
+
             <div class="results" id="results" style="display: none;">
                 <div class="result-item">
                     <span class="result-label">Base Imponible:</span>
                     <span id="base-imponible" class="result-value">Q 0.00</span>
                 </div>
-                
+
                 <div class="result-item">
                     <span class="result-label">ISR (25%):</span>
                     <span id="parrafo1" class="result-value isr">Q 0.00</span>
                 </div>
-                
+
                 <div class="result-item">
                     <span class="result-label">Reserva Legal (5%):</span>
                     <span id="parrafo2" class="result-value reserva">Q 0.00</span>
                 </div>
-                
+
                 <div class="result-item">
                     <span class="result-label">Ganancia Neta:</span>
                     <span id="parrafo3" class="result-value ganancia">Q 0.00</span>
                 </div>
-                
+
                 <div class="result-item">
                     <span class="result-label">Total Distribuido:</span>
                     <span id="parrafo4" class="result-value total">Q 0.00</span>
@@ -93,26 +96,27 @@
     </div>
 
     <script src="index.js">
-        
+
     </script>
     <script>
         const nombre = document.getElementById("nombre")
         const lis_saludos = [
-        "👋 Hola Sheyla",
-        "🌸 Hola Dennisse",
-        "🧠 Hola Rodrigo",
-        "🐶 Hola Brus",
-        "😎 HOLA YO"
-    ];
+            "👋 Hola Sheyla",
+            "🌸 Hola Dennisse",
+            "🧠 Hola Rodrigo",
+            "🐶 Hola Brus",
+            "😎 HOLA YO"
+        ];
 
-    let index = 0;
+        let index = 0;
 
-    function intervalo(){
-        nombre.textContent = lis_saludos[index];
-        index = (index + 1) % lis_saludos.length
-    }
+        function intervalo() {
+            nombre.textContent = lis_saludos[index];
+            index = (index + 1) % lis_saludos.length
+        }
 
-    setInterval(intervalo, 1500)
+        setInterval(intervalo, 1500)
     </script>
 </body>
+
 </html>
