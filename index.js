@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         let isr = base * 0.25;
-        let reserva_legal = (base - isr) * 0.05;
-        let ganancia = base - isr - reserva_legal;
+        let reserva_legal = (valor - isr) * 0.05;
+        let ganancia = valor - isr - reserva_legal;
         let total = ganancia + isr + reserva_legal;
 
 
